@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EE2032E7-A083-49B4-A9A7-76811FFF21E3}</ProjectGuid>
+    <ProjectGuid>{5EC6E6D3-7162-48F3-BB6B-B207FFE89BED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ArrayTasks</RootNamespace>
-    <AssemblyName>ArrayTasks</AssemblyName>
+    <RootNamespace>BubbleSort</RootNamespace>
+    <AssemblyName>BubbleSort</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

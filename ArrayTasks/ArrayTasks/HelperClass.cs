@@ -1,5 +1,8 @@
 using System;
 using static System.Console;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Helper
 {
     public static class HelperClass
@@ -19,7 +22,7 @@ namespace Helper
             return Array;
         }
 
-        static int VerifyUserIntInput()
+        public static int VerifyUserIntInput()
         {
             int value;
             while (true)
@@ -44,12 +47,20 @@ namespace Helper
             }
         }
 
+        public static void DisplayArrayHorizontalWithoutIndexes<T>(T[] Arr)
+        {
+            for (int i = 0; i < Arr.Length; i++)
+            {
+                Write("{0} ",Arr[i]);
+            }
+        }
+
         public static void RandomIntFillArray(int[] Arr, int min_value, int max_value)
         {
             Random random = new Random();
             for (int i = 0; i < Arr.Length; i++)
             {
-                Arr[i] = random.Next(min_value, max_value);
+                Arr[i] = random.Next(min_value, max_value+1);
             }
         }
 
@@ -68,6 +79,18 @@ namespace Helper
             {
                 Arr[i] = random.Next(min_value, max_value + 1);
             }
+        }
+
+        public static T[] ConcatArrays<T>(params T[][] list)
+        {
+            var result = new T[list.Sum(a => a.Length)];
+            int offset = 0;
+            for (int x = 0; x < list.Length; x++)
+            {
+                list[x].CopyTo(result, offset);
+                offset += list[x].Length;
+            }
+            return result;
         }
     }
 }
